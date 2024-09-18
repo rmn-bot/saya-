@@ -67,32 +67,37 @@
             background: #6c757d;
             cursor: not-allowed;
         }
+        #inputSection {
+            display: none;
+        }
     </style>
 </head>
 <body>
+    <!-- Background music (dalam keadaan default tidak aktif) -->
+    <audio id="bgMusic" loop>
+        <source src="success.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
     <div class="container">
         
         <img src="gife1.gif" alt="Deskripsi mp4" width="325">
 
-        <audio controls autoplay loop>
-  <source src="success.mp3" type="audio/mp3">
-</audio>
-
-    <div class="container">
-<h2><img src="gife3.gif" alt="Gif without background" height="150" width="300"></h2>
-        
-        <div class="profile-info" id="profileInfo">
-            <img src="profile.jpg" alt="Profile Picture">
-            <h1>•Selamat-Datang•</h1>
-                        <h2>Profil Saya</h2>
-            <p>Nama: Ramon</p>
-            <p>Profesi: Siswa</p>
-            <p>hobi: Bulutangkis</p>
-            <p>Lokasi: Lahat, sumsel , Indonesia</p>
-            <h2>INFORMASI TENTANG SAYA</h2>
-            <p>hallo kamu love youuuuuuu,saya ramon saya bersemangat di bidang "OLAHRAGA dan PEMROGRAMAN. saya selalu tertarik untuk belajar hal baru".!</p>
+        <div class="container">
+            <h2><img src="gife3.gif" alt="Gif without background" height="150" width="300"></h2>
             
-            <h4>• OLAHRAGA ? </h4> <small>Olahraga adalah aktivitas fisik yang dilakukan dengan tujuan untuk menjaga atau meningkatkan kebugaran tubuh, kesehatan, serta meningkatkan kemampuan fisik seseorang. Selain itu, olahraga juga bisa dilakukan sebagai bentuk hiburan, rekreasi, dan kompetisi, baik secara individu maupun tim. Ada berbagai macam jenis olahraga, mulai dari yang sederhana seperti berlari atau berenang, hingga yang lebih kompleks seperti sepak bola, bulu tangkis, basket, dan lain-lain.
+            <div class="profile-info" id="profileInfo">
+                <img src="profile.jpg" alt="Profile Picture">
+                <h1>•Selamat-Datang•</h1>
+                <h2>Profil Saya</h2>
+                <p>Nama: Ramon</p>
+                <p>Profesi: Siswa</p>
+                <p>hobi: Bulutangkis</p>
+                <p>Lokasi: Lahat, Sumsel, Indonesia</p>
+                <h2>INFORMASI TENTANG SAYA</h2>
+                <p>Hallo kamu love youuuuuuu, saya Ramon! Saya bersemangat di bidang "OLAHRAGA dan PEMROGRAMAN. Saya selalu tertarik untuk belajar hal baru".</p>
+                <!-- Konten lebih lanjut tetap sama -->
+                <h4>• OLAHRAGA ? </h4> <small>Olahraga adalah aktivitas fisik yang dilakukan dengan tujuan untuk menjaga atau meningkatkan kebugaran tubuh, kesehatan, serta meningkatkan kemampuan fisik seseorang. Selain itu, olahraga juga bisa dilakukan sebagai bentuk hiburan, rekreasi, dan kompetisi, baik secara individu maupun tim. Ada berbagai macam jenis olahraga, mulai dari yang sederhana seperti berlari atau berenang, hingga yang lebih kompleks seperti sepak bola, bulu tangkis, basket, dan lain-lain.
 
 Manfaat olahraga tidak hanya terbatas pada kesehatan fisik, tetapi juga memberikan dampak positif pada kesehatan mental, seperti mengurangi stres, meningkatkan suasana hati, serta meningkatkan kualitas tidur.</small>
             
@@ -117,7 +122,7 @@ Tujuan utama pemrograman adalah untuk mengubah ide atau konsep menjadi sistem ya
             <h4>JS (JavaScript) ?</h4>
             <small>JavaScript adalah bahasa pemrograman yang digunakan untuk menambahkan interaktivitas pada halaman web. Dengan JavaScript, kita bisa membuat halaman lebih dinamis dan interaktif, seperti validasi formulir, pembuatan animasi, hingga pemrosesan data secara real-time.Contoh:</small>
             <p></p>
-            ,<img src="contohjs.png" alt="Deskripsi gambar" width="225" height="105">
+            <img src="contohjs.png" alt="Deskripsi gambar" width="225" height="105">
             
             <p><small>Dengan menggabungkan ketiganya, kita dapat membuat situs web yang memiliki struktur baik (HTML), tampilan yang menarik (CSS), dan fungsionalitas interaktif (JavaScript).</small></p>
 
@@ -140,16 +145,23 @@ Tujuan utama pemrograman adalah untuk mengubah ide atau konsep menjadi sistem ya
 <p>•Kolaborasi dan komunitas global:</p><small> Pemrograman juga mendorong kolaborasi di komunitas global. Banyak proyek perangkat lunak bersifat open-source, yang memungkinkan ribuan pengembang di seluruh dunia untuk bekerja bersama dalam proyek yang sama.</small>
 
 <p>•Dengan berbagai manfaat ini, pemrograman menjadi keterampilan penting di era digital dan teknologi tinggi saat ini.<p
-
-<p></p><small>jika ingin mengajak bulutangkis bisa hubungi saya melalui whatsApp dan instagram di bawah!!!!!</small><p/>
             
-            <p><small>⚠️INFO INI AKAN SELALU DI UPDATE⚠️</small></p>
-                        <h3>Hubungi Saya</h3>
-            <p><a href="https://wa.me/6282183977225" target="_blank">WhatsApp</a></p>
-            <p><a href="https://www.instagram.com/tolak_angin.s?igsh=MW9jM3h1MXpqdzh6OA==" target="_blank">Instagram</a></p>
-            
+            <p><small>⚠️INFO INI AKAN SELALU DI UPDATE⚠️</small>
+                <!-- Bagian Hubungi Saya -->
+                <h3>Hubungi Saya</h3>
+                <p><a href="https://wa.me/6282183977225" target="_blank">WhatsApp</a></p>
+                <p><a href="https://www.instagram.com/tolak_angin.s?igsh=MW9jM3h1MXpqdzh6OA==" target="_blank">Instagram</a></p>
             </div>
         </div>
+
+        <div id="consentSection">
+            <label>
+                <input type="checkbox" id="consentCheckbox"> Saya menyesetuju semua persyaratan untuk melanjutkan dan saya bukan ROBOT
+            </label>
+            <br>
+            <button class="button" onclick="showInputSection()" id="agreeButton" disabled>Setuju</button>
+        </div>
+
         <div id="inputSection">
             <div class="input-group">
                 <input type="text" id="nameInput" placeholder="Masukkan Nama Anda">
@@ -159,6 +171,21 @@ Tujuan utama pemrograman adalah untuk mengubah ide atau konsep menjadi sistem ya
     </div>
 
     <script>
+        // Enable "Setuju" button when checkbox is checked
+        document.getElementById('consentCheckbox').addEventListener('change', function() {
+            document.getElementById('agreeButton').disabled = !this.checked;
+        });
+
+        function showInputSection() {
+            // Tampilkan input nama dan sembunyikan bagian persetujuan
+            document.getElementById('consentSection').style.display = 'none';
+            document.getElementById('inputSection').style.display = 'block';
+
+            // Putar musik latar
+            const bgMusic = document.getElementById('bgMusic');
+            bgMusic.play();
+        }
+
         function sendMessage() {
             const name = document.getElementById('nameInput').value.trim();
             if (name) {
@@ -170,10 +197,6 @@ Tujuan utama pemrograman adalah untuk mengubah ide atau konsep menjadi sistem ya
                 // Tampilkan informasi setelah mengirim pesan
                 document.getElementById('inputSection').style.display = 'none';
                 document.getElementById('profileInfo').style.display = 'block';
-                
-                // Putar audio
-                const audio = document.getElementById('introAudio');
-                audio.play();
             } else {
                 alert('Harap masukkan nama Anda.');
             }
